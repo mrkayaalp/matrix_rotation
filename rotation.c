@@ -12,7 +12,8 @@ void right_rotation(int matris[][], int n){
         for(int j=0; j<n; j++){
             matris[i][j] = temp[i][j];
         }
-}
+    }
+}   
 matris[j][n-i-1]
 
 
