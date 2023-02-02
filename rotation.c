@@ -1,11 +1,10 @@
 #include<stdio.h>
 
-void right_rotation(int matris[][], int n){
-    int n;
+void right_rotation(int matris[][100], int n){
     int temp[100][100];
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
-            temp[i][j] = matris[n-j-i][i];
+            temp[i][j] = matris[n-j-1][i];
         }
     }
     for(int i=0; i<n; i++){
@@ -14,8 +13,7 @@ void right_rotation(int matris[][], int n){
         }
     }
 }
-void left_rotation(int matris[][], int n){
-    int n;
+void left_rotation(int matris[][100], int n){
     int temp[100][100];
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
@@ -28,7 +26,7 @@ void left_rotation(int matris[][], int n){
         }
     }
 }
-void matris_yazdir(int matris[][], n){
+void matris_yazdir(int matris[][100], int n){
      for(int i=0; i<n; i++){
         printf("[");
         for(int j=0; j<n; j++){
