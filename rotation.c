@@ -28,6 +28,15 @@ void left_rotation(int matris[][], int n){
         }
     }
 }
+void matris_yazdir(int matris[][], n){
+     for(int i=0; i<n; i++){
+        printf("[");
+        for(int j=0; j<n; j++){
+            printf("%d", matris[i][j]); 
+        }
+        printf("]\n");
+    }
+}
 
 int main(){
     int n;
@@ -41,18 +50,12 @@ int main(){
             scanf("%d", &matris[i][j]); 
         }
     }
-
-    for(int i=0; i<n; i++){
-        printf("[");
-        for(int j=0; j<n; j++){
-            printf("%d", matris[i][j]); 
-        }
-        printf("]\n");
-    }
+    matris_yazdir(matris, n);
     printf("Matrisi sağa çevirmek icin '0', sola cevirmek icin '1' tuslayiniz:" );
     scanf("%d", &yon);
     if(yon == 0)
         right_rotation(matris, n);
     if(yon == 1)
         left_rotation(matris, n);
+    matris_yazdir(matris, n);
 }
